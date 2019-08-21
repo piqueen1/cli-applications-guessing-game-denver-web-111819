@@ -5,16 +5,19 @@ def prompt
 end
 
 def run_guessing_game
-  my_num = rand[6] + 1
+  my_num = rand(6).to_i + 1
   prompt
   user_num = gets.strip
   
-  if user_num == my_num
-    puts "You guessed the correct number!"
+  message = if user_num == my_num
+    puts /You guessed the correct number!/
   elsif user_num == "exit"
-    puts "Goodbye"
+    puts "Goodbye!"
   else
-    puts "Sorry! The computer guessed #{my_num}"
+    puts "Sorry! The computer guessed #{my_num}."
   end
+  
+  message
 end
 
+#run_guessing_game

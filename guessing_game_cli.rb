@@ -7,10 +7,10 @@ end
 def run_guessing_game
   my_num = rand(6).to_i + 1
   prompt
-  user_num = gets.strip
+  user_num = gets.strip.to_i
   
   message = if user_num == my_num
-    puts /You guessed the correct number!/
+    puts "You guessed the correct number!"
   elsif user_num == "exit"
     puts "Goodbye!"
   else

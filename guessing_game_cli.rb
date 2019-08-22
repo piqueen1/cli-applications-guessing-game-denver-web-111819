@@ -9,7 +9,7 @@ def run_guessing_game
   binding.pry
   my_num = rand(6).to_i + 1
   prompt
-  user_num = gets.strip
+  user_num = gets.strip.to_i
   binding.pry
   
   message = if user_num == my_num
